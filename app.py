@@ -1,92 +1,54 @@
 import pandas as pd
 import streamlit as st
+import requests
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 
-# --- CSS לעיצוב ו-RTL עם התאמות לרדיואים ---
-st.markdown(
-    """
-    <style>
-    /* כיוון RTL ויישור טקסט */
-    html, body, [class*="css"]  {
-        direction: rtl;
-        text-align: right;
-        unicode-bidi: bidi-override;
-        background: #f0f4f8;
-        font-family: 'Alef', Arial, sans-serif;
-        color: #222222;
-    }
+# --- CSS לעיצוב עברית ו-RTL ---
+st.markdown("""
+<style>
+html, body, [class*="css"]  {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Alef', sans-serif;
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Alef&display=swap" rel="stylesheet">
+""", unsafe_allow_html=True)
 
-    /* הגדלת שדות הקלט מספריים */
-    input[type=number] {
-        font-size: 1.3rem !important;
-        padding: 8px !important;
-        border-radius: 10px !important;
-        border: 1.5px solid #0a9396 !important;
-        width: 100% !important;
-        box-sizing: border-box;
-        text-align: right !important;
-        background-color: white !important;
-        color: #222222 !important;
+# --- פונקציה לשליפת נתוני מזג אוויר ---
+def get_weather(city_name, api_key):
+    url = f"http://api.openweathermap.org/data/2.5/weather?q={city_name}&units=metric&lang=he&appid={api_key}"
+    response = requests.get(url)
+    if response.status_code != 200:
+        return None
+    data = response.json()
+    # מיפוי ערכי API לערכי הקטגוריות שלך
+    weather_api_to_label = {
+        "Clear": "sunny",
+        "Clouds": "cloudy",
+        "Rain": "rainy",
+        "Snow": "snowy",
+        "Wind": "windy",
+        "Drizzle": "rainy",
+        "Thunderstorm": "rainy",
+        "Mist": "cloudy",
+        "Fog": "cloudy"
     }
-
-    /* עיצוב תוויות רדיו */
-    div.row-widget.stRadio > div {
-        font-size: 1.3rem !important;
-        color: #222222 !important;
-        text-align: right !important;
-        direction: rtl !important;
-        margin-bottom: 10px;
+    weather_main = data['weather'][0]['main']
+    weather_label = weather_api_to_label.get(weather_main, "sunny")  # ברירת מחדל sunny
+    
+    return {
+        'temp': data['main']['temp'],
+        'humidity': data['main']['humidity'],
+        'wind_speed': data['wind']['speed'],
+        'weather': weather_label
     }
-
-    /* עיצוב אפשרויות רדיו */
-    div.row-widget.stRadio > div label {
-        font-size: 1.2rem !important;
-        padding: 5px 12px;
-        cursor: pointer;
-    }
-
-    /* כפתור */
-    div.stButton > button {
-        background-color: #0a9396;
-        color: white;
-        border-radius: 12px;
-        padding: 12px 30px;
-        font-size: 1.2rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin-top: 1.2rem;
-        width: 100%;
-    }
-    div.stButton > button:hover {
-        background-color: #94d2bd;
-        color: #004e4e;
-    }
-
-    /* הודעת הצלחה */
-    .stSuccess {
-        background-color: #94d2bd !important;
-        color: #003333 !important;
-        border-radius: 10px !important;
-        padding: 1rem !important;
-        font-weight: 700 !important;
-        font-size: 1.2rem !important;
-        margin-top: 1rem !important;
-        text-align: right !important;
-    }
-    </style>
-
-    <!-- גופן Alef מגוגל -->
-    <link href="https://fonts.googleapis.com/css2?family=Alef&display=swap" rel="stylesheet">
-    """,
-    unsafe_allow_html=True
-)
 
 # --- טען את הנתונים ---
-df = pd.read_csv('weather_outfits_en.csv')  # תעדכן את הנתיב במחשב שלך
+df = pd.read_csv('weather_outfits_en.csv')  # וודא שהקובץ נמצא בספרייה
 
-# --- קידוד עמודות קטגוריאליות ---
+# --- קידוד קטגוריות ---
 label_encoders = {}
 for col in ['weather', 'season', 'outfit']:
     le = LabelEncoder()
@@ -96,11 +58,11 @@ for col in ['weather', 'season', 'outfit']:
 X = df[['temp', 'humidity', 'wind_speed', 'weather', 'season']]
 y = df['outfit']
 
-# --- בניית המודל ---
+# --- אימון המודל ---
 model = RandomForestClassifier(n_estimators=200, max_depth=10, random_state=42)
 model.fit(X, y)
 
-# --- מילון תרגום לעברית ---
+# --- מילון תרגום ---
 translation_items = {
     'short shirt': 'חולצה קצרה',
     'long shirt': 'חולצה ארוכה',
@@ -119,22 +81,54 @@ def translate_outfit(outfit_en):
     parts = [p.strip() for p in outfit_en.split(',')]
     return ', '.join([translation_items.get(p, p) for p in parts])
 
-# --- ממשק המשתמש ---
-st.title("ממליץ לך מה ללבוש")
+# --- כותרת ---
+st.title("מה ללבוש היום?")
 
-temp = st.number_input("טמפרטורה (°C)", min_value=-10, max_value=45, value=20, step=1)
-humidity = st.number_input("לחות (%)", min_value=0, max_value=100, value=50, step=1)
-wind_speed = st.number_input("מהירות רוח (קמ\"ש)", min_value=0, max_value=100, value=10, step=1)
+# --- בחירת מצב הזנת נתונים ---
+mode = st.radio("כיצד תרצה להזין את הנתונים?", ("שליפה אוטומטית לפי עיר", "הזנה ידנית"))
 
-weather = st.radio("מזג אוויר", list(label_encoders['weather'].classes_))
-season = st.radio("עונה", list(label_encoders['season'].classes_))
+api_key = "451b85a381534122b31a96473ce02388"  # המפתח שסיפקת
 
-if st.button("קבל המלצה"):
-    weather_enc = label_encoders['weather'].transform([weather])[0]
-    season_enc = label_encoders['season'].transform([season])[0]
-    input_data = pd.DataFrame([[temp, humidity, wind_speed, weather_enc, season_enc]],
-                              columns=['temp', 'humidity', 'wind_speed', 'weather', 'season'])
-    pred = model.predict(input_data)[0]
-    outfit_en = label_encoders['outfit'].inverse_transform([pred])[0]
-    outfit_he = translate_outfit(outfit_en)
-    st.success(f"ההמלצה שלך: {outfit_he}")
+if mode == "שליפה אוטומטית לפי עיר":
+    city = st.text_input("הכנס שם עיר:")
+    if st.button("בדוק מזג אוויר"):
+        weather_data = get_weather(city, api_key)
+        if weather_data:
+            st.success(f"מזג האוויר ב-{city}:")
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown("**מזג אוויר:**")
+                st.markdown(f"<div style='font-size:20px; color:blue;'>{weather_data['weather']}</div>", unsafe_allow_html=True)
+                st.markdown("**טמפרטורה:**")
+                st.markdown(f"<div style='font-size:20px;'>{weather_data['temp']}°C</div>", unsafe_allow_html=True)
+            with col2:
+                st.markdown("**לחות:**")
+                st.markdown(f"<div style='font-size:20px;'>{weather_data['humidity']}%</div>", unsafe_allow_html=True)
+                st.markdown("**מהירות רוח:**")
+                st.markdown(f"<div style='font-size:20px;'>{weather_data['wind_speed']} קמ\"ש</div>", unsafe_allow_html=True)
+
+            season = st.radio("בחר עונה", label_encoders['season'].classes_)
+            weather_enc = label_encoders['weather'].transform([weather_data['weather']])[0]
+            season_enc = label_encoders['season'].transform([season])[0]
+            input_df = pd.DataFrame([[weather_data['temp'], weather_data['humidity'], weather_data['wind_speed'], weather_enc, season_enc]],
+                                    columns=['temp', 'humidity', 'wind_speed', 'weather', 'season'])
+            pred = model.predict(input_df)[0]
+            outfit = label_encoders['outfit'].inverse_transform([pred])[0]
+            st.success(f"ההמלצה שלך: {translate_outfit(outfit)}")
+        else:
+            st.error("לא הצלחנו להביא את מזג האוויר. בדוק את שם העיר או את המפתח.")
+else:
+    temp = st.number_input("טמפרטורה (°C)", -10, 45, 20)
+    humidity = st.number_input("לחות (%)", 0, 100, 50)
+    wind_speed = st.number_input("מהירות רוח (קמ\"ש)", 0, 100, 10)
+    weather = st.radio("מזג אוויר", label_encoders['weather'].classes_)
+    season = st.radio("עונה", label_encoders['season'].classes_)
+
+    if st.button("קבל המלצה"):
+        weather_enc = label_encoders['weather'].transform([weather])[0]
+        season_enc = label_encoders['season'].transform([season])[0]
+        input_data = pd.DataFrame([[temp, humidity, wind_speed, weather_enc, season_enc]],
+                                  columns=['temp', 'humidity', 'wind_speed', 'weather', 'season'])
+        pred = model.predict(input_data)[0]
+        outfit_en = label_encoders['outfit'].inverse_transform([pred])[0]
+        st.success(f"ההמלצה שלך: {translate_outfit(outfit_en)}")
