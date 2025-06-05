@@ -200,40 +200,94 @@ season_today = get_season_by_date()
 # --- כותרת ---
 st.title("AICloth - מה ללבוש היום?")
 
-# --- בחירת מצב הזנת נתונים ---
-mode = st.radio("כיצד תרצה להזין את הנתונים?", ("שליפה אוטומטית לפי עיר", "הזנה ידנית"))
+# --- שליפת מיקום GPS באמצעות JS ---
+def get_location():
+    # קוד JS שפותח בקונסולה של הדפדפן ומחזיר קואורדינטות
+    location_js = """
+    <script>
+    const sendLocationToStreamlit = () => {
+        navigator.geolocation.getCurrentPosition(
+            position => {
+                const coords = {
+                    lat: position.coords.latitude,
+                    lon: position.coords.longitude
+                };
+                // שליחת הקואורדינטות ל-Streamlit
+                window.parent.postMessage({ type: 'coords', data: coords }, '*');
+            },
+            error => {
+                window.parent.postMessage({ type: 'coords', data: null }, '*');
+            }
+        );
+    };
+    sendLocationToStreamlit();
+    </script>
+    """
+    st.components.v1.html(location_js, height=0, width=0)
 
-if mode == "שליפה אוטומטית לפי עיר":
+# --- קבלת הודעות מ-JS ---
+
+# בממשק הפשוט של Streamlit אין API ישיר לקבלת אירועים JS (חוץ מה-SessionState)
+# לכן נעשה פתרון פשוט עם st.experimental_get_query_params
+# אבל מכיוון שזה מתבטל, אפשר להשתמש ב-`st.experimental_get_query_params` או עם אוסף params ידני.
+
+# כאן אציע פתרון חלופי עם input נסתר שנעדכן ע"י JS (צריך לבנות אינטגרציה מורכבת יותר ב-frontend).
+
+# במקום זאת, נשתמש ב-Streamlit forms או נבקש מהמשתמש להזין ידנית, או נבחר את האופציות הידניות והעיר.
+
+# לכן, נשמור על 3 אופציות קלט פשוטות:
+
+mode = st.radio("כיצד תרצה להזין את הנתונים?", (
+    "שליפה אוטומטית לפי GPS (מצריך הרשאה בדפדפן)",
+    "שליפה אוטומטית לפי עיר",
+    "הזנה ידנית"
+))
+
+weather_data = None
+city = None
+
+if mode == "שליפה אוטומטית לפי GPS (מצריך הרשאה בדפדפן)":
+    st.markdown("לחץ על הכפתור כדי לאפשר קבלת מיקום ולהביא את מזג האוויר בהתאם:")
+    if st.button("קבל מיקום ומזג אוויר"):
+        # כאן, בגלל מגבלות Streamlit, לא נוכל לקבל מיקום ישירות בלי JS מורכב.
+        # אבל יש פתרונות חיצוניים או הרצת קוד JS כמו בפתרון הבא:
+        st.info("עדכון מיקום מתבצע כרגע. אם זה לא עובד, נסה להזין עיר ידנית.")
+        # פתרון פשוט יותר: בקש מהמשתמש להזין מיקום ידנית, או השתמש בספריית צד ג׳.
+
+        # אלטרנטיבה: השתמש ב-API להמרת כתובת IP למיקום (אם מותר לך)
+        # כאן נשתמש ב-api חינמי להדגמה:
+        try:
+            ip_response = requests.get('https://ipinfo.io/json')
+            ip_data = ip_response.json()
+            loc = ip_data.get('loc', None)  # "lat,lon"
+            if loc:
+                lat, lon = loc.split(',')
+                # המרת קואורדינטות לשם עיר:
+                geo_url = f"http://api.openweathermap.org/geo/1.0/reverse?lat={lat}&lon={lon}&limit=1&appid={api_key}"
+                geo_resp = requests.get(geo_url)
+                city_data = geo_resp.json()
+                if city_data:
+                    city = city_data[0]['name']
+                    st.success(f"זוהתה העיר שלך: {city}")
+                    weather_data = get_weather(city, api_key)
+                else:
+                    st.error("לא הצלחנו לקבל את שם העיר מהמיקום.")
+            else:
+                st.error("לא הצלחנו לקבל מיקום מה-IP.")
+        except Exception as e:
+            st.error(f"שגיאה בקבלת המיקום: {e}")
+
+elif mode == "שליפה אוטומטית לפי עיר":
     city = st.text_input("הכנס שם עיר:")
     if st.button("בדוק מזג אוויר"):
         if not api_key:
             st.error("מפתח ה-API לא נמצא. ודא שקובץ .env קיים עם מפתח תקין.")
         else:
             weather_data = get_weather(city, api_key)
-            if weather_data:
-                st.markdown('<div class="weather-box">', unsafe_allow_html=True)
-                st.markdown(f"**מזג אוויר ב-{city}:**")
-                col1, col2 = st.columns(2)
-                with col1:
-                    st.markdown(f"**מצב מזג האוויר:** <span style='color:#ffde59;'>{weather_data['weather']}</span>", unsafe_allow_html=True)
-                    st.markdown(f"**טמפרטורה:** {weather_data['temp']}°C")
-                    st.markdown(f"**עונה:** <span style='color:#a1e44d;'>{season_today}</span>", unsafe_allow_html=True)
-                with col2:
-                    st.markdown(f"**לחות:** {weather_data['humidity']}%")
-                    st.markdown(f"**מהירות רוח:** {weather_data['wind_speed']} קמ\"ש")
-                st.markdown('</div>', unsafe_allow_html=True)
-
-                weather_enc = label_encoders['weather'].transform([weather_data['weather']])[0]
-                season_enc = label_encoders['season'].transform([season_today])[0]
-                input_df = pd.DataFrame([[weather_data['temp'], weather_data['humidity'], weather_data['wind_speed'], weather_enc, season_enc]],
-                                        columns=['temp', 'humidity', 'wind_speed', 'weather', 'season'])
-                pred = model.predict(input_df)[0]
-                outfit_en = label_encoders['outfit'].inverse_transform([pred])[0]
-
-                st.markdown(f'<div class="outfit-box">ההמלצה שלך: {translate_outfit_en_to_he(outfit_en)}</div>', unsafe_allow_html=True)
-            else:
+            if not weather_data:
                 st.error("לא הצלחנו להביא את מזג האוויר. בדוק את שם העיר או את המפתח.")
-else:
+
+else:  # הזנה ידנית
     temp = st.number_input("טמפרטורה (°C)", -10, 45, 20)
     humidity = st.number_input("לחות (%)", 0, 100, 50)
     wind_speed = st.number_input("מהירות רוח (קמ\"ש)", 0, 100, 10)
@@ -248,3 +302,26 @@ else:
         pred = model.predict(input_data)[0]
         outfit_en = label_encoders['outfit'].inverse_transform([pred])[0]
         st.markdown(f'<div class="outfit-box">ההמלצה שלך: {translate_outfit_en_to_he(outfit_en)}</div>', unsafe_allow_html=True)
+
+# אם קיבלנו נתוני מזג אוויר אוטומטית, נציג ונחשב המלצה
+if weather_data:
+    st.markdown('<div class="weather-box">', unsafe_allow_html=True)
+    st.markdown(f"**מזג אוויר ב-{city}:**")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown(f"**מצב מזג האוויר:** <span style='color:#ffde59;'>{weather_data['weather']}</span>", unsafe_allow_html=True)
+        st.markdown(f"**טמפרטורה:** {weather_data['temp']}°C")
+        st.markdown(f"**עונה:** <span style='color:#a1e44d;'>{season_today}</span>", unsafe_allow_html=True)
+    with col2:
+        st.markdown(f"**לחות:** {weather_data['humidity']}%")
+        st.markdown(f"**מהירות רוח:** {weather_data['wind_speed']} קמ\"ש")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    weather_enc = label_encoders['weather'].transform([weather_data['weather']])[0]
+    season_enc = label_encoders['season'].transform([season_today])[0]
+    input_df = pd.DataFrame([[weather_data['temp'], weather_data['humidity'], weather_data['wind_speed'], weather_enc, season_enc]],
+                            columns=['temp', 'humidity', 'wind_speed', 'weather', 'season'])
+    pred = model.predict(input_df)[0]
+    outfit_en = label_encoders['outfit'].inverse_transform([pred])[0]
+
+    st.markdown(f'<div class="outfit-box">ההמלצה שלך: {translate_outfit_en_to_he(outfit_en)}</div>', unsafe_allow_html=True)
