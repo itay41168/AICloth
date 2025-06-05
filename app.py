@@ -6,17 +6,26 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from dotenv import load_dotenv
 
-# טען את משתני הסביבה מהקובץ .env
 load_dotenv()
-api_key = os.getenv("OPENWEATHER_API_KEY")
 
-# --- CSS לעיצוב עברית ו-RTL ---
+api_key = os.getenv("WEATHER_API_KEY")
+
+# --- CSS לעיצוב עברית ו-RTL ורקע מרשים ---
 st.markdown("""
 <style>
 html, body, [class*="css"]  {
     direction: rtl;
     text-align: right;
     font-family: 'Alef', sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+.stButton>button {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
 }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Alef&display=swap" rel="stylesheet">
@@ -50,6 +59,31 @@ def get_weather(city_name, api_key):
         'weather': weather_label
     }
 
+# --- מילון תרגום outfit מאנגלית לעברית ---
+translation_dict = {
+    'long shirt': 'חולצה ארוכה',
+    'tank top': 'גופייה',
+    'short shirt': 'חולצה קצרה',
+    'sweater': 'סוודר',
+    'thermal shirt': 'חולצה תרמית',
+    'jeans': 'ג\'ינס',
+    'long pants': 'מכנס ארוך',
+    'short pants': 'מכנס קצר',
+    'shorts': 'מכנסיים קצרים',
+    'thermal pants': 'מכנס תרמי',
+    'light jacket': 'מעיל קל',
+    'raincoat': 'מעיל גשם',
+    'boots': 'מגפיים',
+    'regular shoes': 'נעליים רגילות',
+    'waterproof shoes': 'נעליים עמידות למים',
+    'sandals': 'סנדלים'
+}
+
+def translate_outfit_en_to_he(outfit_en):
+    parts = [part.strip() for part in outfit_en.split(',')]
+    translated_parts = [translation_dict.get(p, p) for p in parts]
+    return ', '.join(translated_parts)
+
 # --- טען את הנתונים ---
 df = pd.read_csv('weather_outfits_en.csv')  # וודא שהקובץ נמצא בספרייה
 
@@ -67,27 +101,23 @@ y = df['outfit']
 model = RandomForestClassifier(n_estimators=200, max_depth=10, random_state=42)
 model.fit(X, y)
 
-# --- מילון תרגום ---
-translation_items = {
-    'short shirt': 'חולצה קצרה',
-    'long shirt': 'חולצה ארוכה',
-    'short pants': 'מכנס קצר',
-    'long pants': 'מכנס ארוך',
-    'sandals': 'סנדלים',
-    'regular shoes': 'נעליים רגילות',
-    'waterproof shoes': 'נעליים עמידות למים',
-    'boots': 'מגפיים',
-    'thick coat': 'מעיל עבה',
-    'raincoat': 'מעיל גשם',
-    'light jacket': 'מעיל קל'
-}
-
-def translate_outfit(outfit_en):
-    parts = [p.strip() for p in outfit_en.split(',')]
-    return ', '.join([translation_items.get(p, p) for p in parts])
-
 # --- כותרת ---
 st.title("מה ללבוש היום?")
+
+# --- פונקציה לקבלת עונה לפי תאריך היום ---
+import datetime
+def get_season_by_date():
+    month = datetime.datetime.now().month
+    if month in [12, 1, 2]:
+        return 'winter'
+    elif month in [3,4,5]:
+        return 'spring'
+    elif month in [6,7,8]:
+        return 'summer'
+    else:
+        return 'autumn'
+
+season_today = get_season_by_date()
 
 # --- בחירת מצב הזנת נתונים ---
 mode = st.radio("כיצד תרצה להזין את הנתונים?", ("שליפה אוטומטית לפי עיר", "הזנה ידנית"))
@@ -107,20 +137,21 @@ if mode == "שליפה אוטומטית לפי עיר":
                     st.markdown(f"<div style='font-size:20px; color:blue;'>{weather_data['weather']}</div>", unsafe_allow_html=True)
                     st.markdown("**טמפרטורה:**")
                     st.markdown(f"<div style='font-size:20px;'>{weather_data['temp']}°C</div>", unsafe_allow_html=True)
+                    st.markdown("**עונה:**")
+                    st.markdown(f"<div style='font-size:20px;'>{season_today}</div>", unsafe_allow_html=True)
                 with col2:
                     st.markdown("**לחות:**")
                     st.markdown(f"<div style='font-size:20px;'>{weather_data['humidity']}%</div>", unsafe_allow_html=True)
                     st.markdown("**מהירות רוח:**")
                     st.markdown(f"<div style='font-size:20px;'>{weather_data['wind_speed']} קמ\"ש</div>", unsafe_allow_html=True)
 
-                season = st.radio("בחר עונה", label_encoders['season'].classes_)
                 weather_enc = label_encoders['weather'].transform([weather_data['weather']])[0]
-                season_enc = label_encoders['season'].transform([season])[0]
+                season_enc = label_encoders['season'].transform([season_today])[0]
                 input_df = pd.DataFrame([[weather_data['temp'], weather_data['humidity'], weather_data['wind_speed'], weather_enc, season_enc]],
                                         columns=['temp', 'humidity', 'wind_speed', 'weather', 'season'])
                 pred = model.predict(input_df)[0]
-                outfit = label_encoders['outfit'].inverse_transform([pred])[0]
-                st.success(f"ההמלצה שלך: {translate_outfit(outfit)}")
+                outfit_en = label_encoders['outfit'].inverse_transform([pred])[0]
+                st.success(f"ההמלצה שלך: {translate_outfit_en_to_he(outfit_en)}")
             else:
                 st.error("לא הצלחנו להביא את מזג האוויר. בדוק את שם העיר או את המפתח.")
 else:
@@ -137,4 +168,4 @@ else:
                                   columns=['temp', 'humidity', 'wind_speed', 'weather', 'season'])
         pred = model.predict(input_data)[0]
         outfit_en = label_encoders['outfit'].inverse_transform([pred])[0]
-        st.success(f"ההמלצה שלך: {translate_outfit(outfit_en)}")
+        st.success(f"ההמלצה שלך: {translate_outfit_en_to_he(outfit_en)}")
