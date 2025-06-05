@@ -1,0 +1,1001 @@
+temp,humidity,wind_speed,weather,season,outfit
+5.2,53,2,snowy,autumn,thick coat and boots
+29.6,31,23,windy,summer,"short shirt, short pants"
+1.3,87,21,rainy,winter,raincoat with clothes
+11.7,78,26,snowy,spring,thick coat and boots
+11.2,91,43,rainy,autumn,raincoat with clothes
+11.9,93,2,snowy,autumn,thick coat and boots
+11.3,47,3,cloudy,spring,shirt with light sweater
+28.4,43,49,snowy,spring,thick coat and boots
+31.9,73,7,sunny,summer,"short shirt, shorts and sandals"
+5.3,65,49,cloudy,autumn,sweater and jeans
+6.7,33,28,snowy,winter,thick coat and boots
+-0.7,73,33,rainy,autumn,thick coat and boots
+31.7,91,39,snowy,summer,thick coat and boots
+16.2,82,23,windy,spring,raincoat with clothes
+29.7,70,28,sunny,summer,"short shirt, short pants"
+0.7,94,24,windy,autumn,raincoat with clothes
+8.3,92,10,sunny,autumn,raincoat with clothes
+17.3,37,34,sunny,autumn,shirt with light sweater
+17.9,70,27,sunny,autumn,shirt with light sweater
+14.2,41,33,sunny,autumn,shirt with light sweater
+20.7,64,0,windy,spring,"short shirt, long pants"
+22.5,76,13,windy,autumn,"short shirt, long pants"
+6.5,43,38,sunny,autumn,sweater and jeans
+18.5,44,25,sunny,autumn,shirt with light jacket
+20.9,33,29,snowy,summer,thick coat and boots
+22.3,44,42,windy,spring,shirt with light jacket
+16.0,57,1,snowy,spring,thick coat and boots
+31.0,91,5,windy,summer,raincoat with clothes
+1.7,91,10,snowy,winter,thick coat and boots
+-6.2,91,32,rainy,winter,thick coat and boots
+5.6,99,7,sunny,spring,raincoat with clothes
+5.9,91,36,sunny,autumn,raincoat with clothes
+8.7,88,31,cloudy,spring,raincoat with clothes
+-1.5,81,48,sunny,winter,thick coat and boots
+23.8,68,1,sunny,summer,"short shirt, long pants"
+7.2,85,16,sunny,autumn,raincoat with clothes
+12.5,30,18,sunny,autumn,shirt with light sweater
+29.7,82,43,rainy,summer,raincoat with clothes
+26.9,46,37,snowy,summer,thick coat and boots
+-0.5,99,21,windy,winter,thick coat and boots
+13.2,32,19,sunny,autumn,shirt with light sweater
+-4.6,65,18,cloudy,winter,thick coat and boots
+25.3,81,40,cloudy,summer,raincoat with clothes
+22.7,30,10,rainy,spring,raincoat with clothes
+2.1,45,25,sunny,winter,sweater and jeans
+9.4,89,48,sunny,winter,raincoat with clothes
+29.3,38,40,sunny,summer,"short shirt, short pants"
+18.5,77,15,cloudy,autumn,"short shirt, long pants"
+14.8,53,10,snowy,autumn,thick coat and boots
+17.4,67,39,snowy,spring,thick coat and boots
+9.5,54,28,cloudy,winter,sweater and jeans
+27.2,95,34,rainy,summer,raincoat with clothes
+10.9,62,13,windy,winter,shirt with light sweater
+8.3,37,6,snowy,spring,thick coat and boots
+15.9,88,21,sunny,autumn,raincoat with clothes
+-0.2,80,7,windy,autumn,thick coat and boots
+13.1,57,46,cloudy,autumn,shirt with light sweater
+16.6,98,47,sunny,winter,raincoat with clothes
+13.3,46,43,snowy,autumn,thick coat and boots
+3.9,75,5,windy,winter,sweater and jeans
+16.3,89,32,snowy,autumn,thick coat and boots
+4.4,61,22,windy,winter,sweater and jeans
+16.5,83,2,cloudy,spring,raincoat with clothes
+-5.0,61,46,rainy,winter,thick coat and boots
+23.7,46,39,rainy,summer,raincoat with clothes
+7.8,72,47,sunny,spring,sweater and jeans
+8.3,79,24,windy,autumn,sweater and jeans
+-8.5,89,6,windy,winter,thick coat and boots
+19.0,45,13,snowy,spring,thick coat and boots
+14.1,44,27,cloudy,winter,shirt with light sweater
+37.4,80,24,rainy,summer,raincoat with clothes
+24.6,51,21,windy,summer,shirt with light jacket
+1.1,37,43,snowy,spring,thick coat and boots
+8.4,97,5,windy,winter,raincoat with clothes
+26.6,69,15,snowy,spring,thick coat and boots
+9.8,59,18,rainy,spring,raincoat with clothes
+9.5,91,22,cloudy,spring,raincoat with clothes
+12.2,41,0,sunny,autumn,shirt with light sweater
+25.6,77,24,rainy,summer,raincoat with clothes
+-0.2,30,15,windy,winter,thick coat and boots
+5.7,55,15,windy,spring,sweater and jeans
+25.9,86,28,windy,autumn,raincoat with clothes
+30.2,45,25,snowy,summer,thick coat and boots
+31.9,68,35,windy,summer,"short shirt, shorts and sandals"
+26.4,98,35,windy,spring,raincoat with clothes
+20.8,39,18,snowy,summer,thick coat and boots
+37.7,45,23,sunny,summer,"short shirt, shorts and sandals"
+8.3,61,26,rainy,winter,raincoat with clothes
+17.7,62,42,snowy,winter,thick coat and boots
+6.3,96,0,snowy,spring,thick coat and boots
+10.3,41,30,rainy,spring,raincoat with clothes
+23.7,64,22,rainy,summer,raincoat with clothes
+21.2,63,40,rainy,spring,raincoat with clothes
+9.7,87,49,snowy,autumn,thick coat and boots
+17.5,50,35,cloudy,spring,shirt with light sweater
+30.9,53,34,windy,summer,"short shirt, shorts and sandals"
+2.5,53,22,cloudy,spring,sweater and jeans
+21.9,41,48,windy,summer,shirt with light jacket
+7.0,59,16,windy,autumn,sweater and jeans
+20.5,42,18,snowy,spring,thick coat and boots
+13.1,81,18,snowy,spring,thick coat and boots
+24.9,98,34,windy,summer,raincoat with clothes
+-6.5,82,22,sunny,winter,thick coat and boots
+7.2,68,44,sunny,winter,sweater and jeans
+27.7,38,9,rainy,spring,raincoat with clothes
+30.0,46,37,snowy,summer,thick coat and boots
+9.5,56,1,windy,autumn,sweater and jeans
+5.5,66,37,windy,spring,sweater and jeans
+21.1,74,3,windy,autumn,"short shirt, long pants"
+1.2,60,18,snowy,winter,thick coat and boots
+0.7,48,38,snowy,spring,thick coat and boots
+35.9,74,12,cloudy,summer,"short shirt, shorts and sandals"
+36.0,90,40,snowy,summer,thick coat and boots
+16.3,32,12,sunny,autumn,shirt with light sweater
+-6.6,85,32,sunny,winter,thick coat and boots
+23.8,35,43,windy,summer,shirt with light jacket
+16.6,65,34,windy,spring,shirt with light sweater
+13.1,86,17,snowy,autumn,thick coat and boots
+8.1,30,2,sunny,autumn,sweater and jeans
+-2.7,41,9,sunny,winter,thick coat and boots
+2.5,65,25,snowy,winter,thick coat and boots
+-0.9,89,49,rainy,winter,thick coat and boots
+-5.6,56,16,snowy,winter,thick coat and boots
+9.6,58,12,sunny,spring,sweater and jeans
+31.7,95,9,cloudy,summer,raincoat with clothes
+16.8,34,32,rainy,winter,raincoat with clothes
+29.7,40,20,sunny,summer,"short shirt, short pants"
+27.9,88,26,sunny,summer,raincoat with clothes
+16.5,98,30,windy,spring,raincoat with clothes
+11.6,82,22,cloudy,spring,raincoat with clothes
+12.8,30,44,windy,spring,shirt with light sweater
+3.8,91,0,snowy,spring,thick coat and boots
+9.2,55,33,rainy,spring,raincoat with clothes
+26.5,79,11,cloudy,summer,"short shirt, short pants"
+22.2,86,16,snowy,spring,thick coat and boots
+6.3,43,1,windy,winter,sweater and jeans
+14.6,67,49,cloudy,autumn,shirt with light sweater
+32.0,59,14,rainy,summer,raincoat with clothes
+11.1,67,32,cloudy,autumn,shirt with light sweater
+10.7,59,41,snowy,winter,thick coat and boots
+12.9,98,33,sunny,autumn,raincoat with clothes
+32.0,95,12,windy,summer,raincoat with clothes
+18.9,52,15,cloudy,summer,"short shirt, long pants"
+19.4,45,7,cloudy,autumn,"short shirt, long pants"
+11.0,96,26,snowy,winter,thick coat and boots
+13.0,90,18,rainy,spring,raincoat with clothes
+6.0,51,20,windy,spring,sweater and jeans
+21.5,34,40,sunny,summer,shirt with light jacket
+-4.7,55,46,rainy,winter,thick coat and boots
+6.9,92,47,cloudy,spring,raincoat with clothes
+21.0,81,14,sunny,spring,raincoat with clothes
+8.7,57,22,rainy,autumn,raincoat with clothes
+32.3,52,45,rainy,summer,raincoat with clothes
+6.1,47,37,snowy,autumn,thick coat and boots
+7.3,57,9,cloudy,autumn,sweater and jeans
+6.7,46,38,sunny,autumn,sweater and jeans
+20.2,42,19,rainy,summer,raincoat with clothes
+16.4,39,2,snowy,spring,thick coat and boots
+33.0,63,46,windy,spring,"short shirt, shorts and sandals"
+0.0,71,40,sunny,winter,sweater and jeans
+21.5,85,44,snowy,spring,thick coat and boots
+37.5,62,21,windy,summer,"short shirt, shorts and sandals"
+20.6,35,48,snowy,spring,thick coat and boots
+28.7,91,1,cloudy,summer,raincoat with clothes
+1.3,73,4,cloudy,autumn,sweater and jeans
+30.7,97,18,rainy,summer,raincoat with clothes
+6.7,30,25,sunny,winter,sweater and jeans
+36.5,40,35,windy,summer,"short shirt, shorts and sandals"
+2.9,39,4,cloudy,spring,sweater and jeans
+21.7,73,1,rainy,autumn,raincoat with clothes
+31.7,64,29,rainy,spring,raincoat with clothes
+8.8,98,43,sunny,autumn,raincoat with clothes
+28.8,64,0,windy,summer,"short shirt, short pants"
+5.7,93,28,snowy,winter,thick coat and boots
+0.2,59,34,cloudy,winter,sweater and jeans
+19.1,34,18,windy,spring,"short shirt, long pants"
+11.1,71,24,rainy,autumn,raincoat with clothes
+31.0,67,32,cloudy,summer,"short shirt, shorts and sandals"
+15.3,95,13,sunny,autumn,raincoat with clothes
+13.5,68,5,cloudy,spring,shirt with light sweater
+20.6,93,14,cloudy,summer,raincoat with clothes
+21.0,62,29,windy,autumn,shirt with light jacket
+9.6,56,32,cloudy,autumn,sweater and jeans
+30.0,95,9,snowy,summer,thick coat and boots
+12.2,42,30,cloudy,spring,shirt with light sweater
+14.8,81,14,snowy,autumn,thick coat and boots
+-3.0,74,1,windy,spring,thick coat and boots
+10.3,65,35,cloudy,autumn,shirt with light sweater
+33.9,67,5,cloudy,summer,"short shirt, shorts and sandals"
+7.9,75,42,rainy,winter,raincoat with clothes
+6.4,89,42,rainy,winter,raincoat with clothes
+26.1,97,4,snowy,winter,thick coat and boots
+-1.3,60,8,windy,winter,thick coat and boots
+30.4,58,13,cloudy,summer,"short shirt, shorts and sandals"
+4.3,75,36,sunny,winter,sweater and jeans
+20.5,65,22,rainy,spring,raincoat with clothes
+15.4,69,14,sunny,spring,shirt with light sweater
+22.7,82,8,sunny,spring,raincoat with clothes
+30.4,64,24,snowy,summer,thick coat and boots
+34.6,67,1,cloudy,summer,"short shirt, shorts and sandals"
+18.9,72,43,rainy,autumn,raincoat with clothes
+12.7,83,23,cloudy,autumn,raincoat with clothes
+20.6,78,28,snowy,spring,thick coat and boots
+11.9,51,25,cloudy,autumn,shirt with light sweater
+-3.1,78,19,rainy,winter,thick coat and boots
+30.6,92,39,snowy,summer,thick coat and boots
+8.9,80,18,sunny,spring,sweater and jeans
+19.9,78,44,windy,summer,shirt with light jacket
+24.7,67,3,cloudy,spring,"short shirt, long pants"
+-3.6,84,38,windy,spring,thick coat and boots
+18.8,84,27,rainy,autumn,raincoat with clothes
+-5.6,36,28,rainy,winter,thick coat and boots
+-8.0,88,7,sunny,winter,thick coat and boots
+29.7,96,32,sunny,summer,raincoat with clothes
+15.0,45,3,rainy,winter,raincoat with clothes
+8.4,83,20,windy,winter,raincoat with clothes
+29.6,89,17,rainy,summer,raincoat with clothes
+21.7,76,4,sunny,summer,"short shirt, long pants"
+-0.6,41,19,cloudy,winter,thick coat and boots
+5.1,67,29,windy,spring,sweater and jeans
+12.4,53,16,rainy,spring,raincoat with clothes
+30.4,43,8,cloudy,summer,"short shirt, shorts and sandals"
+-5.8,51,42,rainy,winter,thick coat and boots
+31.7,55,28,snowy,summer,thick coat and boots
+3.6,46,36,rainy,spring,raincoat with clothes
+18.9,56,30,rainy,spring,raincoat with clothes
+36.1,82,6,cloudy,summer,raincoat with clothes
+35.9,46,25,windy,summer,"short shirt, shorts and sandals"
+12.1,31,42,snowy,spring,thick coat and boots
+25.2,82,35,cloudy,spring,raincoat with clothes
+18.8,88,38,rainy,autumn,raincoat with clothes
+4.0,83,33,cloudy,winter,raincoat with clothes
+0.7,49,18,windy,autumn,sweater and jeans
+12.1,91,44,snowy,autumn,thick coat and boots
+9.6,69,16,rainy,autumn,raincoat with clothes
+31.1,90,42,sunny,spring,raincoat with clothes
+-1.4,73,29,rainy,winter,thick coat and boots
+27.6,41,18,rainy,summer,raincoat with clothes
+19.6,76,11,snowy,spring,thick coat and boots
+33.1,37,30,cloudy,summer,"short shirt, shorts and sandals"
+24.0,99,7,sunny,spring,raincoat with clothes
+22.4,41,14,rainy,spring,raincoat with clothes
+14.0,61,9,rainy,autumn,raincoat with clothes
+1.9,52,25,sunny,winter,sweater and jeans
+9.9,36,8,rainy,spring,raincoat with clothes
+10.5,88,22,rainy,autumn,raincoat with clothes
+24.5,46,13,rainy,spring,raincoat with clothes
+-6.0,89,44,cloudy,autumn,thick coat and boots
+22.8,84,22,cloudy,summer,raincoat with clothes
+15.2,33,28,sunny,winter,shirt with light sweater
+28.7,71,43,sunny,summer,"short shirt, short pants"
+36.6,84,34,rainy,summer,raincoat with clothes
+31.6,68,45,rainy,summer,raincoat with clothes
+5.4,91,48,windy,winter,raincoat with clothes
+33.2,39,29,windy,spring,"short shirt, shorts and sandals"
+10.4,34,0,snowy,spring,thick coat and boots
+26.5,59,49,sunny,summer,"short shirt, short pants"
+-1.4,91,36,rainy,winter,thick coat and boots
+13.3,97,11,sunny,spring,raincoat with clothes
+6.8,66,36,rainy,autumn,raincoat with clothes
+19.9,75,23,snowy,autumn,thick coat and boots
+11.5,54,6,windy,autumn,shirt with light sweater
+14.3,86,25,snowy,winter,thick coat and boots
+26.3,32,5,sunny,spring,"short shirt, short pants"
+6.3,38,34,windy,spring,sweater and jeans
+9.6,90,41,rainy,winter,raincoat with clothes
+14.2,32,31,rainy,autumn,raincoat with clothes
+13.0,97,13,windy,autumn,raincoat with clothes
+-0.7,58,8,rainy,spring,thick coat and boots
+6.9,71,8,sunny,autumn,sweater and jeans
+7.0,67,7,sunny,autumn,sweater and jeans
+13.7,77,25,windy,autumn,shirt with light sweater
+31.5,98,12,windy,summer,raincoat with clothes
+7.6,69,44,rainy,spring,raincoat with clothes
+6.2,69,33,windy,winter,sweater and jeans
+11.9,62,5,cloudy,winter,shirt with light sweater
+2.0,88,47,cloudy,winter,raincoat with clothes
+18.8,74,24,windy,spring,shirt with light jacket
+17.2,89,6,rainy,spring,raincoat with clothes
+10.6,74,30,cloudy,spring,shirt with light sweater
+10.4,59,38,rainy,autumn,raincoat with clothes
+7.2,31,13,rainy,autumn,raincoat with clothes
+9.5,42,45,windy,spring,sweater and jeans
+8.7,46,39,sunny,autumn,sweater and jeans
+17.5,64,47,rainy,autumn,raincoat with clothes
+38.8,59,6,cloudy,summer,"short shirt, shorts and sandals"
+27.5,89,14,sunny,summer,raincoat with clothes
+29.4,51,3,windy,summer,"short shirt, short pants"
+3.5,46,11,snowy,winter,thick coat and boots
+26.0,39,0,sunny,summer,"short shirt, short pants"
+38.1,81,11,rainy,summer,raincoat with clothes
+7.8,40,32,windy,autumn,sweater and jeans
+27.4,33,16,cloudy,summer,"short shirt, short pants"
+4.4,68,14,windy,autumn,sweater and jeans
+5.9,31,46,windy,autumn,sweater and jeans
+31.5,51,10,snowy,summer,thick coat and boots
+17.6,88,19,cloudy,autumn,raincoat with clothes
+27.5,86,4,cloudy,summer,raincoat with clothes
+19.3,44,33,cloudy,autumn,shirt with light jacket
+13.6,93,48,cloudy,spring,raincoat with clothes
+6.9,56,7,snowy,spring,thick coat and boots
+25.5,46,28,sunny,winter,"short shirt, short pants"
+18.2,32,28,cloudy,spring,shirt with light jacket
+9.9,82,23,snowy,winter,thick coat and boots
+15.0,54,29,rainy,winter,raincoat with clothes
+30.5,38,37,sunny,summer,"short shirt, shorts and sandals"
+8.6,31,23,sunny,winter,sweater and jeans
+-3.0,93,12,cloudy,winter,thick coat and boots
+13.8,67,31,windy,spring,shirt with light sweater
+8.2,62,37,windy,autumn,sweater and jeans
+8.2,46,11,cloudy,spring,sweater and jeans
+14.7,49,32,snowy,spring,thick coat and boots
+29.0,62,40,rainy,summer,raincoat with clothes
+0.7,55,21,sunny,spring,sweater and jeans
+19.4,73,48,rainy,autumn,raincoat with clothes
+9.4,90,2,cloudy,winter,raincoat with clothes
+25.7,37,7,sunny,autumn,"short shirt, short pants"
+29.8,91,19,snowy,summer,thick coat and boots
+38.6,33,5,cloudy,summer,"short shirt, shorts and sandals"
+27.0,32,40,rainy,summer,raincoat with clothes
+18.5,41,22,rainy,winter,raincoat with clothes
+1.3,54,44,windy,winter,sweater and jeans
+10.5,74,7,rainy,autumn,raincoat with clothes
+0.8,84,31,windy,spring,raincoat with clothes
+25.1,51,36,snowy,autumn,thick coat and boots
+8.5,88,2,sunny,winter,raincoat with clothes
+-6.0,83,14,rainy,winter,thick coat and boots
+11.7,78,29,snowy,spring,thick coat and boots
+11.6,33,27,rainy,spring,raincoat with clothes
+17.6,89,23,snowy,winter,thick coat and boots
+41.0,95,14,sunny,summer,raincoat with clothes
+30.1,35,38,snowy,summer,thick coat and boots
+32.0,41,2,cloudy,summer,"short shirt, shorts and sandals"
+16.3,69,20,rainy,spring,raincoat with clothes
+15.8,71,43,sunny,autumn,shirt with light sweater
+24.6,66,4,rainy,summer,raincoat with clothes
+23.5,43,38,windy,summer,shirt with light jacket
+14.0,31,38,snowy,spring,thick coat and boots
+29.9,95,34,sunny,summer,raincoat with clothes
+14.4,94,39,windy,spring,raincoat with clothes
+4.6,40,9,snowy,winter,thick coat and boots
+16.3,39,11,rainy,autumn,raincoat with clothes
+20.2,72,11,sunny,summer,"short shirt, long pants"
+12.0,93,19,sunny,spring,raincoat with clothes
+-8.1,66,48,sunny,winter,thick coat and boots
+23.4,85,27,snowy,spring,thick coat and boots
+9.4,31,8,snowy,autumn,thick coat and boots
+13.3,49,25,windy,autumn,shirt with light sweater
+14.1,88,4,sunny,spring,raincoat with clothes
+7.8,80,13,sunny,spring,sweater and jeans
+1.2,72,33,rainy,winter,raincoat with clothes
+-2.2,58,38,rainy,spring,thick coat and boots
+27.6,52,44,cloudy,autumn,"short shirt, short pants"
+3.9,37,49,rainy,winter,raincoat with clothes
+10.0,34,46,sunny,spring,sweater and jeans
+30.4,94,25,rainy,summer,raincoat with clothes
+14.3,75,3,rainy,autumn,raincoat with clothes
+16.2,48,30,sunny,spring,shirt with light sweater
+11.7,91,27,windy,winter,raincoat with clothes
+37.1,93,5,rainy,summer,raincoat with clothes
+10.7,60,40,sunny,autumn,shirt with light sweater
+14.4,33,37,snowy,autumn,thick coat and boots
+18.1,30,23,rainy,autumn,raincoat with clothes
+31.2,44,0,sunny,summer,"short shirt, shorts and sandals"
+17.8,89,28,rainy,winter,raincoat with clothes
+9.1,78,31,sunny,spring,sweater and jeans
+26.5,95,45,cloudy,spring,raincoat with clothes
+22.1,55,7,cloudy,spring,"short shirt, long pants"
+1.4,55,24,rainy,winter,raincoat with clothes
+4.8,77,36,windy,winter,sweater and jeans
+-3.9,99,45,snowy,autumn,thick coat and boots
+25.3,72,44,snowy,summer,thick coat and boots
+13.2,80,14,cloudy,spring,shirt with light sweater
+8.1,42,21,windy,winter,sweater and jeans
+15.7,81,45,rainy,autumn,raincoat with clothes
+5.2,57,34,windy,autumn,sweater and jeans
+17.1,78,12,rainy,winter,raincoat with clothes
+11.2,36,30,rainy,winter,raincoat with clothes
+0.7,92,48,rainy,winter,raincoat with clothes
+30.6,71,35,windy,summer,"short shirt, shorts and sandals"
+8.8,76,12,snowy,winter,thick coat and boots
+-2.9,38,25,windy,autumn,thick coat and boots
+11.8,71,7,rainy,spring,raincoat with clothes
+-3.7,55,26,sunny,winter,thick coat and boots
+20.6,89,38,snowy,spring,thick coat and boots
+25.2,47,18,sunny,summer,"short shirt, short pants"
+22.8,76,48,rainy,winter,raincoat with clothes
+4.3,62,20,snowy,autumn,thick coat and boots
+23.6,61,10,windy,spring,"short shirt, long pants"
+36.1,86,24,sunny,summer,raincoat with clothes
+36.4,71,38,cloudy,summer,"short shirt, shorts and sandals"
+21.5,53,45,sunny,spring,shirt with light jacket
+17.0,68,44,snowy,autumn,thick coat and boots
+36.1,65,2,snowy,summer,thick coat and boots
+10.5,97,12,sunny,spring,raincoat with clothes
+6.4,31,4,snowy,spring,thick coat and boots
+-5.8,79,2,cloudy,winter,thick coat and boots
+32.1,87,2,snowy,summer,thick coat and boots
+36.4,59,7,rainy,summer,raincoat with clothes
+30.1,87,35,snowy,summer,thick coat and boots
+24.2,84,15,windy,spring,raincoat with clothes
+31.5,84,15,sunny,summer,raincoat with clothes
+-10.0,52,27,sunny,winter,thick coat and boots
+9.5,94,29,windy,autumn,raincoat with clothes
+9.8,61,32,snowy,spring,thick coat and boots
+16.6,67,33,snowy,spring,thick coat and boots
+7.5,95,40,snowy,spring,thick coat and boots
+8.8,94,10,rainy,spring,raincoat with clothes
+14.4,84,5,snowy,autumn,thick coat and boots
+12.3,44,21,cloudy,autumn,shirt with light sweater
+5.2,78,41,windy,winter,sweater and jeans
+15.7,74,34,rainy,summer,raincoat with clothes
+29.3,36,13,rainy,summer,raincoat with clothes
+17.3,64,1,windy,spring,shirt with light sweater
+18.0,95,24,rainy,autumn,raincoat with clothes
+15.8,65,30,sunny,spring,shirt with light sweater
+35.0,81,2,sunny,summer,raincoat with clothes
+16.9,35,24,sunny,autumn,shirt with light sweater
+14.6,97,24,windy,spring,raincoat with clothes
+5.6,74,11,snowy,autumn,thick coat and boots
+5.5,47,28,snowy,winter,thick coat and boots
+-10.0,72,1,windy,winter,thick coat and boots
+14.2,63,9,cloudy,winter,shirt with light sweater
+0.9,40,49,rainy,spring,raincoat with clothes
+6.4,50,8,sunny,spring,sweater and jeans
+2.9,36,15,cloudy,winter,sweater and jeans
+17.2,69,16,snowy,winter,thick coat and boots
+24.4,81,28,snowy,spring,thick coat and boots
+-10.0,92,36,snowy,winter,thick coat and boots
+12.5,36,26,windy,winter,shirt with light sweater
+8.3,84,1,windy,winter,raincoat with clothes
+27.5,50,37,cloudy,summer,"short shirt, short pants"
+9.2,68,4,windy,autumn,sweater and jeans
+17.7,82,17,windy,spring,raincoat with clothes
+14.1,89,10,windy,spring,raincoat with clothes
+10.0,81,25,windy,autumn,raincoat with clothes
+26.1,81,28,snowy,summer,thick coat and boots
+30.8,50,41,rainy,summer,raincoat with clothes
+23.0,89,47,sunny,spring,raincoat with clothes
+7.2,39,49,sunny,spring,sweater and jeans
+30.9,63,7,snowy,summer,thick coat and boots
+16.6,46,22,sunny,autumn,shirt with light sweater
+8.7,94,22,windy,winter,raincoat with clothes
+10.3,72,0,windy,spring,shirt with light sweater
+5.6,40,14,cloudy,spring,sweater and jeans
+6.2,57,42,cloudy,autumn,sweater and jeans
+34.3,37,9,windy,summer,"short shirt, shorts and sandals"
+28.9,37,39,snowy,summer,thick coat and boots
+6.2,78,35,sunny,spring,sweater and jeans
+25.5,70,24,snowy,summer,thick coat and boots
+24.1,31,12,rainy,summer,raincoat with clothes
+12.4,40,9,snowy,spring,thick coat and boots
+5.7,51,29,sunny,autumn,sweater and jeans
+-10.0,73,31,windy,winter,thick coat and boots
+3.6,61,29,sunny,autumn,sweater and jeans
+19.4,41,40,sunny,autumn,shirt with light jacket
+4.3,37,45,rainy,autumn,raincoat with clothes
+9.8,51,42,snowy,winter,thick coat and boots
+17.8,56,49,snowy,spring,thick coat and boots
+8.4,52,23,cloudy,autumn,sweater and jeans
+16.8,85,2,windy,winter,raincoat with clothes
+9.5,52,28,cloudy,autumn,sweater and jeans
+34.4,37,41,snowy,summer,thick coat and boots
+31.4,34,2,sunny,summer,"short shirt, shorts and sandals"
+13.5,39,20,snowy,spring,thick coat and boots
+-1.8,56,1,cloudy,winter,thick coat and boots
+26.5,87,11,windy,spring,raincoat with clothes
+33.4,63,19,sunny,spring,"short shirt, shorts and sandals"
+12.3,87,3,cloudy,autumn,raincoat with clothes
+21.6,33,19,windy,autumn,"short shirt, long pants"
+30.0,83,39,cloudy,summer,raincoat with clothes
+6.9,67,45,windy,autumn,sweater and jeans
+0.6,43,2,snowy,winter,thick coat and boots
+25.5,87,3,windy,winter,raincoat with clothes
+17.8,89,18,rainy,winter,raincoat with clothes
+25.9,51,23,cloudy,spring,"short shirt, short pants"
+19.9,60,35,snowy,spring,thick coat and boots
+12.6,77,44,cloudy,winter,shirt with light sweater
+-1.7,76,10,sunny,winter,thick coat and boots
+14.1,74,32,snowy,spring,thick coat and boots
+5.7,44,5,snowy,spring,thick coat and boots
+12.9,38,25,snowy,autumn,thick coat and boots
+1.1,79,2,windy,winter,sweater and jeans
+7.2,99,16,cloudy,spring,raincoat with clothes
+10.1,98,28,windy,autumn,raincoat with clothes
+9.2,78,20,windy,winter,sweater and jeans
+32.5,68,49,windy,summer,"short shirt, shorts and sandals"
+23.0,53,35,sunny,autumn,shirt with light jacket
+29.8,89,30,sunny,summer,raincoat with clothes
+-3.8,65,20,sunny,winter,thick coat and boots
+23.2,43,9,snowy,summer,thick coat and boots
+-2.6,99,43,rainy,winter,thick coat and boots
+22.4,50,3,windy,spring,"short shirt, long pants"
+38.2,36,5,sunny,summer,"short shirt, shorts and sandals"
+15.5,44,47,rainy,autumn,raincoat with clothes
+24.8,71,25,windy,autumn,shirt with light jacket
+8.3,98,2,sunny,winter,raincoat with clothes
+13.0,66,23,rainy,autumn,raincoat with clothes
+17.1,41,40,cloudy,spring,shirt with light sweater
+14.1,97,41,rainy,spring,raincoat with clothes
+7.9,57,42,sunny,spring,sweater and jeans
+15.4,46,33,sunny,spring,shirt with light sweater
+21.7,31,21,rainy,summer,raincoat with clothes
+4.5,95,9,sunny,winter,raincoat with clothes
+31.1,69,37,cloudy,summer,"short shirt, shorts and sandals"
+21.5,39,34,cloudy,winter,shirt with light jacket
+-0.0,36,20,cloudy,winter,thick coat and boots
+9.8,97,45,rainy,winter,raincoat with clothes
+-2.8,43,26,windy,winter,thick coat and boots
+18.2,69,27,sunny,spring,shirt with light jacket
+32.4,71,34,sunny,summer,"short shirt, shorts and sandals"
+27.6,52,24,snowy,summer,thick coat and boots
+12.1,40,11,rainy,autumn,raincoat with clothes
+23.6,70,35,snowy,summer,thick coat and boots
+22.3,44,47,windy,spring,shirt with light jacket
+21.1,71,19,rainy,summer,raincoat with clothes
+29.9,32,26,snowy,summer,thick coat and boots
+22.4,69,37,cloudy,summer,shirt with light jacket
+11.2,61,47,snowy,spring,thick coat and boots
+9.4,33,29,windy,autumn,sweater and jeans
+29.0,75,15,cloudy,summer,"short shirt, short pants"
+16.7,50,29,windy,spring,shirt with light sweater
+6.7,56,4,rainy,spring,raincoat with clothes
+13.2,97,24,cloudy,spring,raincoat with clothes
+0.8,90,27,rainy,winter,raincoat with clothes
+6.2,79,5,sunny,spring,sweater and jeans
+10.9,76,43,snowy,autumn,thick coat and boots
+-10.0,32,11,sunny,winter,thick coat and boots
+1.3,91,32,rainy,winter,raincoat with clothes
+12.9,81,33,cloudy,spring,raincoat with clothes
+26.3,86,22,cloudy,spring,raincoat with clothes
+2.4,98,43,sunny,winter,raincoat with clothes
+6.7,45,33,cloudy,autumn,sweater and jeans
+29.6,69,27,cloudy,summer,"short shirt, short pants"
+19.1,76,37,sunny,autumn,shirt with light jacket
+10.4,86,45,windy,autumn,raincoat with clothes
+7.8,35,26,snowy,winter,thick coat and boots
+16.4,75,37,cloudy,autumn,shirt with light sweater
+23.2,48,29,snowy,summer,thick coat and boots
+10.9,54,39,cloudy,autumn,shirt with light sweater
+9.3,57,19,rainy,winter,raincoat with clothes
+21.2,48,46,sunny,spring,shirt with light jacket
+-2.3,59,8,windy,winter,thick coat and boots
+5.7,81,24,sunny,winter,raincoat with clothes
+31.3,97,27,cloudy,summer,raincoat with clothes
+17.2,70,15,rainy,winter,raincoat with clothes
+11.1,40,45,sunny,spring,shirt with light sweater
+19.5,50,4,windy,summer,"short shirt, long pants"
+4.5,90,8,snowy,winter,thick coat and boots
+-7.2,94,7,cloudy,winter,thick coat and boots
+14.5,44,40,snowy,spring,thick coat and boots
+19.1,81,28,rainy,autumn,raincoat with clothes
+34.1,58,3,windy,summer,"short shirt, shorts and sandals"
+25.2,57,3,snowy,autumn,thick coat and boots
+38.9,95,23,snowy,summer,thick coat and boots
+27.1,84,40,cloudy,summer,raincoat with clothes
+20.6,94,28,sunny,spring,raincoat with clothes
+16.4,69,13,sunny,spring,shirt with light sweater
+30.4,90,37,windy,autumn,raincoat with clothes
+10.1,91,7,sunny,spring,raincoat with clothes
+10.8,78,41,snowy,autumn,thick coat and boots
+7.7,38,23,sunny,autumn,sweater and jeans
+8.8,80,38,sunny,spring,sweater and jeans
+14.9,68,12,sunny,autumn,shirt with light sweater
+4.5,75,44,cloudy,winter,sweater and jeans
+10.9,48,11,snowy,spring,thick coat and boots
+11.2,62,44,windy,winter,shirt with light sweater
+35.7,98,7,snowy,summer,thick coat and boots
+12.4,97,29,cloudy,spring,raincoat with clothes
+19.0,48,46,snowy,spring,thick coat and boots
+3.4,44,40,snowy,winter,thick coat and boots
+19.0,92,28,rainy,autumn,raincoat with clothes
+23.2,39,13,rainy,spring,raincoat with clothes
+19.3,68,27,cloudy,summer,shirt with light jacket
+22.3,67,2,snowy,autumn,thick coat and boots
+11.1,70,11,rainy,winter,raincoat with clothes
+31.7,91,48,cloudy,autumn,raincoat with clothes
+9.6,52,23,sunny,autumn,sweater and jeans
+22.3,65,34,snowy,spring,thick coat and boots
+12.7,82,37,sunny,spring,raincoat with clothes
+25.2,96,27,snowy,summer,thick coat and boots
+-5.6,92,22,sunny,winter,thick coat and boots
+-9.7,86,35,cloudy,winter,thick coat and boots
+14.4,53,38,sunny,winter,shirt with light sweater
+22.5,85,0,snowy,summer,thick coat and boots
+13.5,48,28,snowy,spring,thick coat and boots
+34.4,40,48,snowy,summer,thick coat and boots
+11.5,37,33,windy,spring,shirt with light sweater
+17.1,60,3,snowy,winter,thick coat and boots
+29.2,79,4,windy,spring,"short shirt, short pants"
+22.4,55,26,cloudy,summer,shirt with light jacket
+28.5,93,26,cloudy,summer,raincoat with clothes
+19.0,66,41,cloudy,summer,shirt with light jacket
+2.2,64,22,windy,winter,sweater and jeans
+28.1,58,12,snowy,summer,thick coat and boots
+14.1,46,44,snowy,autumn,thick coat and boots
+4.9,42,33,snowy,winter,thick coat and boots
+17.8,80,2,windy,spring,shirt with light sweater
+24.1,75,43,rainy,summer,raincoat with clothes
+10.7,40,38,snowy,spring,thick coat and boots
+7.3,42,46,cloudy,winter,sweater and jeans
+22.1,80,16,cloudy,summer,"short shirt, long pants"
+5.7,53,18,snowy,autumn,thick coat and boots
+6.6,37,27,windy,spring,sweater and jeans
+18.7,93,26,sunny,spring,raincoat with clothes
+16.9,40,44,rainy,spring,raincoat with clothes
+8.3,85,19,snowy,autumn,thick coat and boots
+15.5,41,5,rainy,spring,raincoat with clothes
+17.6,81,31,cloudy,spring,raincoat with clothes
+27.9,62,23,rainy,summer,raincoat with clothes
+-1.9,80,13,cloudy,autumn,thick coat and boots
+35.0,80,46,rainy,autumn,raincoat with clothes
+12.3,74,16,snowy,autumn,thick coat and boots
+24.7,48,37,sunny,spring,shirt with light jacket
+18.1,51,28,cloudy,autumn,shirt with light jacket
+23.7,96,9,cloudy,summer,raincoat with clothes
+33.7,53,34,windy,summer,"short shirt, shorts and sandals"
+0.7,76,34,sunny,winter,sweater and jeans
+19.7,59,6,rainy,autumn,raincoat with clothes
+16.6,65,24,sunny,autumn,shirt with light sweater
+16.3,64,1,sunny,spring,shirt with light sweater
+14.0,63,45,sunny,autumn,shirt with light sweater
+24.6,32,13,snowy,summer,thick coat and boots
+3.8,74,31,windy,winter,sweater and jeans
+28.2,45,1,windy,summer,"short shirt, short pants"
+9.9,63,41,sunny,winter,sweater and jeans
+8.6,85,46,snowy,winter,thick coat and boots
+7.7,63,38,snowy,autumn,thick coat and boots
+13.4,68,0,cloudy,autumn,shirt with light sweater
+12.6,59,12,sunny,spring,shirt with light sweater
+24.5,60,16,cloudy,spring,"short shirt, long pants"
+3.8,39,35,rainy,autumn,raincoat with clothes
+8.4,79,27,snowy,winter,thick coat and boots
+39.1,82,23,snowy,summer,thick coat and boots
+15.7,41,30,snowy,autumn,thick coat and boots
+25.5,78,14,rainy,summer,raincoat with clothes
+10.6,67,16,sunny,spring,shirt with light sweater
+13.1,37,40,rainy,autumn,raincoat with clothes
+28.9,63,43,windy,summer,"short shirt, short pants"
+-3.4,44,12,snowy,winter,thick coat and boots
+17.2,80,36,sunny,autumn,shirt with light sweater
+13.8,58,32,rainy,spring,raincoat with clothes
+8.7,76,22,cloudy,winter,sweater and jeans
+21.3,42,36,windy,spring,shirt with light jacket
+17.7,54,29,snowy,spring,thick coat and boots
+9.4,41,36,windy,spring,sweater and jeans
+30.0,57,40,sunny,summer,"short shirt, shorts and sandals"
+12.1,42,17,rainy,autumn,raincoat with clothes
+26.4,38,8,windy,spring,"short shirt, short pants"
+24.9,83,21,cloudy,summer,raincoat with clothes
+21.8,63,8,snowy,spring,thick coat and boots
+17.8,47,2,snowy,winter,thick coat and boots
+6.1,83,0,snowy,winter,thick coat and boots
+2.3,42,48,windy,winter,sweater and jeans
+23.4,75,12,rainy,summer,raincoat with clothes
+15.7,43,9,rainy,spring,raincoat with clothes
+7.0,41,23,sunny,autumn,sweater and jeans
+23.4,54,35,cloudy,spring,shirt with light jacket
+35.1,57,15,snowy,summer,thick coat and boots
+9.1,87,11,sunny,autumn,raincoat with clothes
+11.7,63,36,windy,autumn,shirt with light sweater
+24.5,54,32,windy,summer,shirt with light jacket
+17.4,41,15,rainy,autumn,raincoat with clothes
+-4.8,36,35,cloudy,winter,thick coat and boots
+17.7,74,21,cloudy,autumn,shirt with light sweater
+17.7,96,28,snowy,autumn,thick coat and boots
+14.3,73,25,windy,spring,shirt with light sweater
+-8.1,38,4,rainy,winter,thick coat and boots
+9.3,57,21,snowy,winter,thick coat and boots
+15.4,88,25,sunny,spring,raincoat with clothes
+-4.1,82,7,rainy,winter,thick coat and boots
+-2.5,57,10,snowy,winter,thick coat and boots
+17.5,83,46,sunny,autumn,raincoat with clothes
+11.3,75,49,sunny,autumn,shirt with light sweater
+28.0,83,32,sunny,summer,raincoat with clothes
+31.9,44,31,cloudy,summer,"short shirt, shorts and sandals"
+11.3,67,21,rainy,spring,raincoat with clothes
+29.1,75,12,rainy,summer,raincoat with clothes
+11.6,73,44,cloudy,autumn,shirt with light sweater
+4.4,62,16,snowy,autumn,thick coat and boots
+8.6,57,43,cloudy,winter,sweater and jeans
+29.9,45,3,sunny,summer,"short shirt, short pants"
+13.3,40,36,snowy,autumn,thick coat and boots
+17.3,48,22,rainy,spring,raincoat with clothes
+16.0,37,12,rainy,autumn,raincoat with clothes
+28.1,94,42,snowy,summer,thick coat and boots
+14.6,73,8,sunny,autumn,shirt with light sweater
+6.6,65,36,rainy,spring,raincoat with clothes
+10.0,71,39,snowy,winter,thick coat and boots
+21.7,51,36,cloudy,summer,shirt with light jacket
+19.2,74,9,sunny,autumn,"short shirt, long pants"
+3.3,83,26,sunny,winter,raincoat with clothes
+45.0,96,19,cloudy,summer,raincoat with clothes
+-6.7,64,34,windy,winter,thick coat and boots
+20.5,74,28,cloudy,spring,shirt with light jacket
+-6.5,97,0,windy,winter,thick coat and boots
+28.1,70,40,sunny,summer,"short shirt, short pants"
+8.3,94,16,rainy,spring,raincoat with clothes
+22.6,97,4,rainy,summer,raincoat with clothes
+10.7,85,20,cloudy,winter,raincoat with clothes
+7.4,89,6,snowy,autumn,thick coat and boots
+19.7,69,4,rainy,autumn,raincoat with clothes
+5.1,37,40,snowy,spring,thick coat and boots
+6.7,75,27,cloudy,winter,sweater and jeans
+21.0,66,0,sunny,summer,"short shirt, long pants"
+6.5,69,35,cloudy,autumn,sweater and jeans
+31.4,96,33,windy,summer,raincoat with clothes
+23.3,82,22,sunny,spring,raincoat with clothes
+21.7,70,5,windy,spring,"short shirt, long pants"
+-0.5,39,39,sunny,spring,thick coat and boots
+5.8,80,21,windy,autumn,sweater and jeans
+7.8,67,35,snowy,autumn,thick coat and boots
+11.2,79,29,sunny,autumn,shirt with light sweater
+33.7,54,47,windy,summer,"short shirt, shorts and sandals"
+9.8,76,35,cloudy,autumn,sweater and jeans
+5.1,83,20,windy,autumn,raincoat with clothes
+-5.3,71,9,sunny,winter,thick coat and boots
+-9.4,63,8,cloudy,winter,thick coat and boots
+12.7,46,3,cloudy,spring,shirt with light sweater
+23.4,54,20,snowy,winter,thick coat and boots
+29.0,65,16,sunny,spring,"short shirt, short pants"
+36.8,44,31,rainy,spring,raincoat with clothes
+11.1,68,16,cloudy,autumn,shirt with light sweater
+29.1,70,28,cloudy,summer,"short shirt, short pants"
+19.5,32,16,windy,spring,"short shirt, long pants"
+5.2,76,44,sunny,autumn,sweater and jeans
+11.7,61,31,sunny,autumn,shirt with light sweater
+-10.0,47,48,snowy,winter,thick coat and boots
+2.4,88,28,cloudy,autumn,raincoat with clothes
+10.5,78,39,sunny,autumn,shirt with light sweater
+25.7,35,39,windy,autumn,"short shirt, short pants"
+15.3,48,11,cloudy,spring,shirt with light sweater
+6.5,97,43,cloudy,winter,raincoat with clothes
+14.6,51,36,rainy,autumn,raincoat with clothes
+-5.8,41,10,cloudy,winter,thick coat and boots
+19.8,41,16,cloudy,spring,"short shirt, long pants"
+33.0,98,32,sunny,summer,raincoat with clothes
+27.1,48,21,rainy,summer,raincoat with clothes
+13.9,97,32,cloudy,spring,raincoat with clothes
+11.2,83,6,snowy,spring,thick coat and boots
+16.3,49,28,cloudy,autumn,shirt with light sweater
+15.7,92,9,rainy,winter,raincoat with clothes
+14.8,46,1,sunny,spring,shirt with light sweater
+26.7,98,27,rainy,summer,raincoat with clothes
+32.5,70,48,sunny,summer,"short shirt, shorts and sandals"
+20.2,32,9,sunny,autumn,"short shirt, long pants"
+31.7,53,9,sunny,summer,"short shirt, shorts and sandals"
+34.8,72,38,rainy,summer,raincoat with clothes
+25.4,48,19,windy,autumn,"short shirt, short pants"
+8.6,59,33,rainy,autumn,raincoat with clothes
+33.0,77,5,cloudy,summer,"short shirt, shorts and sandals"
+1.0,88,1,cloudy,spring,raincoat with clothes
+18.9,51,35,snowy,spring,thick coat and boots
+29.7,57,0,sunny,summer,"short shirt, short pants"
+4.3,65,18,windy,spring,sweater and jeans
+18.6,65,8,rainy,spring,raincoat with clothes
+9.2,67,16,rainy,spring,raincoat with clothes
+31.5,56,49,rainy,summer,raincoat with clothes
+15.2,57,46,snowy,autumn,thick coat and boots
+14.3,56,25,snowy,autumn,thick coat and boots
+24.0,71,49,snowy,autumn,thick coat and boots
+15.3,69,38,windy,winter,shirt with light sweater
+17.5,76,32,windy,spring,shirt with light sweater
+19.0,72,47,windy,spring,shirt with light jacket
+36.5,87,32,cloudy,summer,raincoat with clothes
+10.9,77,9,rainy,autumn,raincoat with clothes
+18.9,75,2,cloudy,summer,"short shirt, long pants"
+27.7,37,45,sunny,summer,"short shirt, short pants"
+28.8,68,48,sunny,summer,"short shirt, short pants"
+11.1,83,36,snowy,winter,thick coat and boots
+13.4,90,42,rainy,spring,raincoat with clothes
+23.2,69,35,snowy,autumn,thick coat and boots
+29.9,47,33,snowy,summer,thick coat and boots
+9.6,87,12,cloudy,autumn,raincoat with clothes
+1.2,30,2,windy,winter,sweater and jeans
+27.8,30,37,rainy,summer,raincoat with clothes
+30.7,96,44,windy,summer,raincoat with clothes
+5.7,64,3,snowy,autumn,thick coat and boots
+7.4,85,41,sunny,spring,raincoat with clothes
+7.2,50,23,sunny,autumn,sweater and jeans
+18.8,34,35,windy,spring,shirt with light jacket
+26.7,78,41,rainy,summer,raincoat with clothes
+31.2,35,44,sunny,summer,"short shirt, shorts and sandals"
+11.0,34,41,sunny,autumn,shirt with light sweater
+9.4,59,21,sunny,autumn,sweater and jeans
+0.5,66,22,windy,spring,sweater and jeans
+12.1,46,39,snowy,spring,thick coat and boots
+12.9,35,43,rainy,spring,raincoat with clothes
+23.1,61,41,sunny,summer,shirt with light jacket
+0.5,39,46,rainy,autumn,raincoat with clothes
+5.8,57,10,cloudy,winter,sweater and jeans
+20.4,44,27,cloudy,summer,shirt with light jacket
+-10.0,91,32,cloudy,winter,thick coat and boots
+22.9,69,46,cloudy,autumn,shirt with light jacket
+24.9,42,0,sunny,summer,"short shirt, long pants"
+22.7,77,46,windy,summer,shirt with light jacket
+20.3,68,23,sunny,spring,shirt with light jacket
+28.0,42,4,sunny,summer,"short shirt, short pants"
+33.5,82,0,sunny,summer,raincoat with clothes
+20.0,72,24,sunny,spring,shirt with light jacket
+19.6,61,25,windy,autumn,shirt with light jacket
+3.2,83,27,sunny,winter,raincoat with clothes
+22.4,70,43,sunny,spring,shirt with light jacket
+12.3,58,18,sunny,autumn,shirt with light sweater
+10.1,40,45,rainy,autumn,raincoat with clothes
+15.4,47,47,sunny,summer,shirt with light sweater
+30.9,86,48,snowy,summer,thick coat and boots
+9.8,95,12,rainy,spring,raincoat with clothes
+7.5,83,13,snowy,spring,thick coat and boots
+-0.5,84,3,cloudy,winter,thick coat and boots
+19.3,59,42,snowy,autumn,thick coat and boots
+34.4,38,27,sunny,summer,"short shirt, shorts and sandals"
+13.7,87,36,snowy,autumn,thick coat and boots
+0.4,91,38,windy,winter,raincoat with clothes
+10.3,88,6,rainy,winter,raincoat with clothes
+-2.3,35,28,sunny,winter,thick coat and boots
+31.2,50,25,sunny,summer,"short shirt, shorts and sandals"
+-6.7,91,41,rainy,winter,thick coat and boots
+18.1,45,7,rainy,winter,raincoat with clothes
+-0.2,86,39,cloudy,winter,thick coat and boots
+21.6,31,49,cloudy,spring,shirt with light jacket
+11.9,52,17,cloudy,winter,shirt with light sweater
+32.6,96,37,sunny,summer,raincoat with clothes
+5.3,30,29,windy,autumn,sweater and jeans
+2.6,56,35,snowy,spring,thick coat and boots
+10.9,82,14,rainy,autumn,raincoat with clothes
+15.4,62,27,snowy,autumn,thick coat and boots
+4.8,66,21,sunny,winter,sweater and jeans
+26.3,34,45,windy,summer,"short shirt, short pants"
+30.5,85,45,sunny,summer,raincoat with clothes
+26.3,47,1,windy,autumn,"short shirt, short pants"
+-0.8,83,37,cloudy,winter,thick coat and boots
+11.1,96,44,cloudy,winter,raincoat with clothes
+17.3,44,15,cloudy,autumn,shirt with light sweater
+23.5,59,47,windy,spring,shirt with light jacket
+10.8,67,30,cloudy,spring,shirt with light sweater
+22.8,84,14,rainy,summer,raincoat with clothes
+13.9,87,34,cloudy,winter,raincoat with clothes
+14.7,54,3,windy,autumn,shirt with light sweater
+22.3,48,42,windy,spring,shirt with light jacket
+29.2,77,18,rainy,summer,raincoat with clothes
+5.5,84,27,cloudy,autumn,raincoat with clothes
+-2.6,79,3,cloudy,spring,thick coat and boots
+21.2,71,19,sunny,summer,"short shirt, long pants"
+31.3,90,17,sunny,summer,raincoat with clothes
+13.0,50,43,rainy,autumn,raincoat with clothes
+16.2,83,9,sunny,spring,raincoat with clothes
+28.3,94,6,cloudy,summer,raincoat with clothes
+9.5,76,16,sunny,winter,sweater and jeans
+8.8,49,49,rainy,spring,raincoat with clothes
+17.4,41,39,sunny,winter,shirt with light sweater
+32.3,67,2,snowy,summer,thick coat and boots
+-3.8,66,48,rainy,winter,thick coat and boots
+26.4,65,25,rainy,summer,raincoat with clothes
+9.7,37,28,snowy,autumn,thick coat and boots
+3.8,59,16,rainy,winter,raincoat with clothes
+-4.0,74,46,snowy,winter,thick coat and boots
+10.0,82,22,cloudy,winter,raincoat with clothes
+7.0,86,7,sunny,winter,raincoat with clothes
+18.7,49,38,windy,autumn,shirt with light jacket
+17.4,58,18,snowy,spring,thick coat and boots
+29.5,79,6,cloudy,summer,"short shirt, short pants"
+3.6,39,31,rainy,winter,raincoat with clothes
+-7.4,32,36,windy,winter,thick coat and boots
+27.7,85,22,sunny,summer,raincoat with clothes
+8.8,93,7,cloudy,winter,raincoat with clothes
+11.9,65,12,snowy,spring,thick coat and boots
+13.7,55,21,snowy,winter,thick coat and boots
+12.0,51,1,rainy,winter,raincoat with clothes
+10.3,75,31,cloudy,autumn,shirt with light sweater
+35.6,53,34,windy,summer,"short shirt, shorts and sandals"
+4.1,91,22,snowy,winter,thick coat and boots
+1.8,86,41,sunny,spring,raincoat with clothes
+12.2,38,21,rainy,spring,raincoat with clothes
+27.8,69,16,sunny,spring,"short shirt, short pants"
+18.7,44,14,rainy,autumn,raincoat with clothes
+4.7,92,11,windy,autumn,raincoat with clothes
+1.0,89,6,cloudy,winter,raincoat with clothes
+12.9,68,3,cloudy,spring,shirt with light sweater
+14.7,91,39,sunny,autumn,raincoat with clothes
+28.3,43,30,windy,spring,"short shirt, short pants"
+36.1,68,7,snowy,summer,thick coat and boots
+8.8,67,27,windy,spring,sweater and jeans
+17.8,57,2,cloudy,spring,shirt with light sweater
+16.5,67,7,rainy,spring,raincoat with clothes
+18.8,35,13,sunny,autumn,"short shirt, long pants"
+14.9,98,24,cloudy,winter,raincoat with clothes
+6.9,60,20,sunny,autumn,sweater and jeans
+23.8,42,44,snowy,summer,thick coat and boots
+6.8,78,19,rainy,autumn,raincoat with clothes
+-1.1,30,14,windy,winter,thick coat and boots
+8.9,53,7,sunny,spring,sweater and jeans
+24.7,88,12,cloudy,summer,raincoat with clothes
+7.9,57,24,windy,autumn,sweater and jeans
+15.6,59,38,rainy,spring,raincoat with clothes
+26.3,42,42,rainy,spring,raincoat with clothes
+15.9,44,8,windy,spring,shirt with light sweater
+1.7,82,22,rainy,winter,raincoat with clothes
+10.8,38,46,snowy,winter,thick coat and boots
+11.8,38,31,snowy,spring,thick coat and boots
+9.0,86,7,snowy,autumn,thick coat and boots
+7.6,91,11,cloudy,winter,raincoat with clothes
+11.8,40,38,cloudy,spring,shirt with light sweater
+21.8,61,28,sunny,autumn,shirt with light jacket
+5.0,93,7,windy,spring,raincoat with clothes
+7.6,40,23,sunny,spring,sweater and jeans
+15.6,57,16,windy,spring,shirt with light sweater
+29.3,85,37,cloudy,summer,raincoat with clothes
+16.1,97,21,rainy,winter,raincoat with clothes
+36.3,72,35,sunny,summer,"short shirt, shorts and sandals"
+32.4,87,34,windy,summer,raincoat with clothes
+35.4,57,0,cloudy,summer,"short shirt, shorts and sandals"
+28.1,33,37,rainy,summer,raincoat with clothes
+6.8,38,46,cloudy,winter,sweater and jeans
+-2.0,54,33,snowy,winter,thick coat and boots
+4.2,53,41,rainy,autumn,raincoat with clothes
+5.8,96,23,rainy,spring,raincoat with clothes
+21.0,87,26,cloudy,spring,raincoat with clothes
+-2.6,63,22,sunny,winter,thick coat and boots
+25.2,41,22,rainy,autumn,raincoat with clothes
+18.4,32,20,sunny,winter,"short shirt, long pants"
+11.9,78,21,snowy,spring,thick coat and boots
+2.3,44,45,windy,spring,sweater and jeans
+7.2,50,23,sunny,winter,sweater and jeans
+21.4,76,22,rainy,spring,raincoat with clothes
+5.8,47,20,cloudy,winter,sweater and jeans
+20.3,96,39,cloudy,winter,raincoat with clothes
+32.0,81,48,rainy,summer,raincoat with clothes
+4.0,82,36,cloudy,winter,raincoat with clothes
+5.7,98,8,cloudy,winter,raincoat with clothes
+16.0,68,25,rainy,autumn,raincoat with clothes
+29.6,92,27,cloudy,spring,raincoat with clothes
+25.1,60,24,sunny,summer,"short shirt, short pants"
+1.6,84,21,sunny,winter,raincoat with clothes
+-6.3,92,41,windy,winter,thick coat and boots
+31.3,50,14,rainy,summer,raincoat with clothes
+6.0,76,16,cloudy,spring,sweater and jeans
+5.2,42,16,rainy,spring,raincoat with clothes
+31.5,64,45,sunny,summer,"short shirt, shorts and sandals"
+26.8,44,26,windy,summer,"short shirt, short pants"
+8.9,89,5,sunny,spring,raincoat with clothes
+10.4,78,22,rainy,spring,raincoat with clothes
+14.8,49,5,rainy,spring,raincoat with clothes
+25.4,93,49,cloudy,summer,raincoat with clothes
+36.6,42,6,snowy,summer,thick coat and boots
+9.0,44,18,snowy,winter,thick coat and boots
+13.5,64,18,cloudy,autumn,shirt with light sweater
+3.6,64,31,snowy,winter,thick coat and boots
+30.1,46,6,snowy,summer,thick coat and boots
+21.4,94,34,rainy,autumn,raincoat with clothes
+18.9,43,36,snowy,winter,thick coat and boots
+-1.9,69,15,snowy,winter,thick coat and boots
+-4.6,95,30,snowy,winter,thick coat and boots
+11.0,60,8,cloudy,autumn,shirt with light sweater
+-2.8,86,15,windy,autumn,thick coat and boots
+8.4,47,49,rainy,autumn,raincoat with clothes
+26.4,72,44,windy,spring,"short shirt, short pants"
+9.5,35,45,windy,autumn,sweater and jeans
+5.0,47,14,snowy,winter,thick coat and boots
+17.6,35,47,rainy,winter,raincoat with clothes
+15.0,72,16,cloudy,winter,shirt with light sweater
+6.8,92,3,snowy,winter,thick coat and boots
+18.2,99,34,sunny,spring,raincoat with clothes
+26.2,51,47,sunny,summer,"short shirt, short pants"
+23.4,38,11,cloudy,autumn,"short shirt, long pants"
+11.3,47,48,sunny,autumn,shirt with light sweater
+11.6,59,24,sunny,autumn,shirt with light sweater
+12.6,54,9,rainy,winter,raincoat with clothes
+27.0,70,24,rainy,summer,raincoat with clothes
+24.2,77,33,cloudy,summer,shirt with light jacket
+31.2,74,6,cloudy,summer,"short shirt, shorts and sandals"
+9.4,93,1,sunny,autumn,raincoat with clothes
+0.2,45,48,sunny,winter,sweater and jeans
+12.3,88,25,rainy,autumn,raincoat with clothes
+-0.4,77,41,sunny,winter,thick coat and boots
+13.0,33,38,snowy,winter,thick coat and boots
+28.3,36,46,rainy,summer,raincoat with clothes
+8.0,41,12,snowy,autumn,thick coat and boots
+25.0,65,20,cloudy,summer,"short shirt, short pants"
+10.2,65,27,windy,winter,shirt with light sweater
+20.8,52,15,windy,summer,"short shirt, long pants"
+32.3,81,36,rainy,summer,raincoat with clothes
+28.6,81,18,cloudy,spring,raincoat with clothes
+13.9,50,36,rainy,spring,raincoat with clothes
+24.8,92,35,snowy,autumn,thick coat and boots
+29.7,98,35,rainy,summer,raincoat with clothes
+33.4,72,28,windy,summer,"short shirt, shorts and sandals"
+0.4,81,46,snowy,winter,thick coat and boots
+1.2,99,46,sunny,winter,raincoat with clothes
+3.0,49,8,sunny,autumn,sweater and jeans
+8.7,51,3,snowy,winter,thick coat and boots
+29.6,63,12,snowy,spring,thick coat and boots
+32.5,90,30,sunny,summer,raincoat with clothes
+25.8,61,1,windy,autumn,"short shirt, short pants"
+27.8,46,31,snowy,autumn,thick coat and boots
+-2.6,60,42,windy,winter,thick coat and boots
+9.4,41,30,sunny,winter,sweater and jeans
+32.0,94,46,sunny,spring,raincoat with clothes
+-1.2,53,3,windy,winter,thick coat and boots
+11.6,55,10,cloudy,winter,shirt with light sweater
