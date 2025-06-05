@@ -5,30 +5,112 @@ import requests
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from dotenv import load_dotenv
+import datetime
 
 load_dotenv()
 
 api_key = os.getenv("WEATHER_API_KEY")
 
-# --- CSS לעיצוב עברית ו-RTL ורקע מרשים ---
+# --- CSS לעיצוב עברית, RTL, רקע ורוד, טקסט מוגדל, והסרת רווחים מיותרים ---
 st.markdown("""
 <style>
-html, body, [class*="css"]  {
+@import url('https://fonts.googleapis.com/css2?family=Alef&display=swap');
+
+html, body, [class*="css"] {
     direction: rtl;
     text-align: right;
     font-family: 'Alef', sans-serif;
-    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
-    color: #333;
+    background: linear-gradient(135deg, #f78ca0 0%, #f9748f 50%, #fd868c 100%);
+    color: #ffffff;
     min-height: 100vh;
-    padding: 20px;
+    margin: 0;
+    padding: 30px 40px;
+    font-size: 20px;  /* טקסט מוגדל לכל העמוד */
 }
+
+h1 {
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #fff3f5;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
 .stButton>button {
-    background-color: #4a90e2;
+    background-color: #d6336c;
     color: white;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 22px;
+    border-radius: 10px;
+    padding: 14px 28px;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 0;  /* הסרת מרווח תחתון כדי למנוע רווח לבן מתחת */
+}
+.stButton>button:hover {
+    background-color: #e85c8a;
+}
+
+.stTextInput>div>input {
+    font-size: 20px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+}
+
+.stRadio>div {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.weather-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 25px 30px;
+    border-radius: 18px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 16px rgba(0,0,0,0.25);
+    max-width: 650px;
+}
+
+.outfit-box {
+    background-color: #d6336c;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    font-size: 26px;
+    font-weight: 900;
+    max-width: 650px;
+    margin-top: 40px;
+    color: white;
+    text-align: center;
+    letter-spacing: 1.2px;
+}
+
+@media (max-width: 768px) {
+    html, body, [class*="css"] {
+        padding: 20px 15px;
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 38px;
+    }
+    .stButton>button, .stTextInput>div>input {
+        max-width: 100%;
+    }
+    .weather-box, .outfit-box {
+        max-width: 100%;
+    }
 }
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Alef&display=swap" rel="stylesheet">
 """, unsafe_allow_html=True)
 
 # --- פונקציה לשליפת נתוני מזג אוויר ---
@@ -101,11 +183,7 @@ y = df['outfit']
 model = RandomForestClassifier(n_estimators=200, max_depth=10, random_state=42)
 model.fit(X, y)
 
-# --- כותרת ---
-st.title("מה ללבוש היום?")
-
 # --- פונקציה לקבלת עונה לפי תאריך היום ---
-import datetime
 def get_season_by_date():
     month = datetime.datetime.now().month
     if month in [12, 1, 2]:
@@ -119,6 +197,9 @@ def get_season_by_date():
 
 season_today = get_season_by_date()
 
+# --- כותרת ---
+st.title("AICloth - מה ללבוש היום?")
+
 # --- בחירת מצב הזנת נתונים ---
 mode = st.radio("כיצד תרצה להזין את הנתונים?", ("שליפה אוטומטית לפי עיר", "הזנה ידנית"))
 
@@ -130,20 +211,17 @@ if mode == "שליפה אוטומטית לפי עיר":
         else:
             weather_data = get_weather(city, api_key)
             if weather_data:
-                st.success(f"מזג האוויר ב-{city}:")
+                st.markdown('<div class="weather-box">', unsafe_allow_html=True)
+                st.markdown(f"**מזג אוויר ב-{city}:**")
                 col1, col2 = st.columns(2)
                 with col1:
-                    st.markdown("**מזג אוויר:**")
-                    st.markdown(f"<div style='font-size:20px; color:blue;'>{weather_data['weather']}</div>", unsafe_allow_html=True)
-                    st.markdown("**טמפרטורה:**")
-                    st.markdown(f"<div style='font-size:20px;'>{weather_data['temp']}°C</div>", unsafe_allow_html=True)
-                    st.markdown("**עונה:**")
-                    st.markdown(f"<div style='font-size:20px;'>{season_today}</div>", unsafe_allow_html=True)
+                    st.markdown(f"**מצב מזג האוויר:** <span style='color:#ffde59;'>{weather_data['weather']}</span>", unsafe_allow_html=True)
+                    st.markdown(f"**טמפרטורה:** {weather_data['temp']}°C")
+                    st.markdown(f"**עונה:** <span style='color:#a1e44d;'>{season_today}</span>", unsafe_allow_html=True)
                 with col2:
-                    st.markdown("**לחות:**")
-                    st.markdown(f"<div style='font-size:20px;'>{weather_data['humidity']}%</div>", unsafe_allow_html=True)
-                    st.markdown("**מהירות רוח:**")
-                    st.markdown(f"<div style='font-size:20px;'>{weather_data['wind_speed']} קמ\"ש</div>", unsafe_allow_html=True)
+                    st.markdown(f"**לחות:** {weather_data['humidity']}%")
+                    st.markdown(f"**מהירות רוח:** {weather_data['wind_speed']} קמ\"ש")
+                st.markdown('</div>', unsafe_allow_html=True)
 
                 weather_enc = label_encoders['weather'].transform([weather_data['weather']])[0]
                 season_enc = label_encoders['season'].transform([season_today])[0]
@@ -151,7 +229,8 @@ if mode == "שליפה אוטומטית לפי עיר":
                                         columns=['temp', 'humidity', 'wind_speed', 'weather', 'season'])
                 pred = model.predict(input_df)[0]
                 outfit_en = label_encoders['outfit'].inverse_transform([pred])[0]
-                st.success(f"ההמלצה שלך: {translate_outfit_en_to_he(outfit_en)}")
+
+                st.markdown(f'<div class="outfit-box">ההמלצה שלך: {translate_outfit_en_to_he(outfit_en)}</div>', unsafe_allow_html=True)
             else:
                 st.error("לא הצלחנו להביא את מזג האוויר. בדוק את שם העיר או את המפתח.")
 else:
@@ -168,4 +247,4 @@ else:
                                   columns=['temp', 'humidity', 'wind_speed', 'weather', 'season'])
         pred = model.predict(input_data)[0]
         outfit_en = label_encoders['outfit'].inverse_transform([pred])[0]
-        st.success(f"ההמלצה שלך: {translate_outfit_en_to_he(outfit_en)}")
+        st.markdown(f'<div class="outfit-box">ההמלצה שלך: {translate_outfit_en_to_he(outfit_en)}</div>', unsafe_allow_html=True)
