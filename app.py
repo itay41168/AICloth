@@ -6,6 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from dotenv import load_dotenv
 import datetime
+from streamlit_javascript import st_javascript  # ספריית JS ל-Streamlit
 
 load_dotenv()
 
@@ -113,6 +114,7 @@ h1 {
 </style>
 """, unsafe_allow_html=True)
 
+
 # --- פונקציה לשליפת נתוני מזג אוויר ---
 def get_weather(city_name, api_key):
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city_name}&units=metric&lang=he&appid={api_key}"
@@ -200,43 +202,7 @@ season_today = get_season_by_date()
 # --- כותרת ---
 st.title("AICloth - מה ללבוש היום?")
 
-# --- שליפת מיקום GPS באמצעות JS ---
-def get_location():
-    # קוד JS שפותח בקונסולה של הדפדפן ומחזיר קואורדינטות
-    location_js = """
-    <script>
-    const sendLocationToStreamlit = () => {
-        navigator.geolocation.getCurrentPosition(
-            position => {
-                const coords = {
-                    lat: position.coords.latitude,
-                    lon: position.coords.longitude
-                };
-                // שליחת הקואורדינטות ל-Streamlit
-                window.parent.postMessage({ type: 'coords', data: coords }, '*');
-            },
-            error => {
-                window.parent.postMessage({ type: 'coords', data: null }, '*');
-            }
-        );
-    };
-    sendLocationToStreamlit();
-    </script>
-    """
-    st.components.v1.html(location_js, height=0, width=0)
-
-# --- קבלת הודעות מ-JS ---
-
-# בממשק הפשוט של Streamlit אין API ישיר לקבלת אירועים JS (חוץ מה-SessionState)
-# לכן נעשה פתרון פשוט עם st.experimental_get_query_params
-# אבל מכיוון שזה מתבטל, אפשר להשתמש ב-`st.experimental_get_query_params` או עם אוסף params ידני.
-
-# כאן אציע פתרון חלופי עם input נסתר שנעדכן ע"י JS (צריך לבנות אינטגרציה מורכבת יותר ב-frontend).
-
-# במקום זאת, נשתמש ב-Streamlit forms או נבקש מהמשתמש להזין ידנית, או נבחר את האופציות הידניות והעיר.
-
-# לכן, נשמור על 3 אופציות קלט פשוטות:
-
+# --- בחירת מצב קלט ---
 mode = st.radio("כיצד תרצה להזין את הנתונים?", (
     "שליפה אוטומטית לפי GPS (מצריך הרשאה בדפדפן)",
     "שליפה אוטומטית לפי עיר",
@@ -247,35 +213,34 @@ weather_data = None
 city = None
 
 if mode == "שליפה אוטומטית לפי GPS (מצריך הרשאה בדפדפן)":
-    st.markdown("לחץ על הכפתור כדי לאפשר קבלת מיקום ולהביא את מזג האוויר בהתאם:")
-    if st.button("קבל מיקום ומזג אוויר"):
-        # כאן, בגלל מגבלות Streamlit, לא נוכל לקבל מיקום ישירות בלי JS מורכב.
-        # אבל יש פתרונות חיצוניים או הרצת קוד JS כמו בפתרון הבא:
-        st.info("עדכון מיקום מתבצע כרגע. אם זה לא עובד, נסה להזין עיר ידנית.")
-        # פתרון פשוט יותר: בקש מהמשתמש להזין מיקום ידנית, או השתמש בספריית צד ג׳.
+    st.markdown("לחץ על הכפתור כדי לקבל את המיקום מהמכשיר שלך:")
 
-        # אלטרנטיבה: השתמש ב-API להמרת כתובת IP למיקום (אם מותר לך)
-        # כאן נשתמש ב-api חינמי להדגמה:
-        try:
-            ip_response = requests.get('https://ipinfo.io/json')
-            ip_data = ip_response.json()
-            loc = ip_data.get('loc', None)  # "lat,lon"
-            if loc:
-                lat, lon = loc.split(',')
-                # המרת קואורדינטות לשם עיר:
-                geo_url = f"http://api.openweathermap.org/geo/1.0/reverse?lat={lat}&lon={lon}&limit=1&appid={api_key}"
-                geo_resp = requests.get(geo_url)
-                city_data = geo_resp.json()
-                if city_data:
-                    city = city_data[0]['name']
-                    st.success(f"זוהתה העיר שלך: {city}")
-                    weather_data = get_weather(city, api_key)
-                else:
-                    st.error("לא הצלחנו לקבל את שם העיר מהמיקום.")
+    if st.button("קבל מיקום ומזג אוויר"):
+        # בקשת קואורדינטות GPS מהדפדפן באמצעות JS (streamlit_javascript)
+        coords = st_javascript("""
+            new Promise((resolve) => {
+                navigator.geolocation.getCurrentPosition(
+                    pos => resolve({lat: pos.coords.latitude, lon: pos.coords.longitude}),
+                    err => resolve(null)
+                );
+            });
+        """)
+
+        if coords:
+            lat, lon = coords['lat'], coords['lon']
+            st.success(f"קואורדינטות התקבלו: {lat}, {lon}")
+            # המרת קואורדינטות לשם עיר באמצעות OpenWeatherMap Geo API
+            geo_url = f"http://api.openweathermap.org/geo/1.0/reverse?lat={lat}&lon={lon}&limit=1&appid={api_key}"
+            geo_resp = requests.get(geo_url)
+            city_data = geo_resp.json()
+            if city_data:
+                city = city_data[0]['name']
+                st.success(f"זוהתה העיר שלך: {city}")
+                weather_data = get_weather(city, api_key)
             else:
-                st.error("לא הצלחנו לקבל מיקום מה-IP.")
-        except Exception as e:
-            st.error(f"שגיאה בקבלת המיקום: {e}")
+                st.error("לא הצלחנו לקבל את שם העיר מהמיקום.")
+        else:
+            st.error("לא הצלחנו לקבל מיקום - יש לאשר הרשאה בדפדפן או להזין עיר ידנית.")
 
 elif mode == "שליפה אוטומטית לפי עיר":
     city = st.text_input("הכנס שם עיר:")
@@ -303,7 +268,7 @@ else:  # הזנה ידנית
         outfit_en = label_encoders['outfit'].inverse_transform([pred])[0]
         st.markdown(f'<div class="outfit-box">ההמלצה שלך: {translate_outfit_en_to_he(outfit_en)}</div>', unsafe_allow_html=True)
 
-# אם קיבלנו נתוני מזג אוויר אוטומטית, נציג ונחשב המלצה
+# הצגת מזג אוויר והמלצה אם יש נתונים
 if weather_data:
     st.markdown('<div class="weather-box">', unsafe_allow_html=True)
     st.markdown(f"**מזג אוויר ב-{city}:**")
