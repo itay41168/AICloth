@@ -87,7 +87,7 @@ st.title("מה ללבוש היום?")
 # --- בחירת מצב הזנת נתונים ---
 mode = st.radio("כיצד תרצה להזין את הנתונים?", ("שליפה אוטומטית לפי עיר", "הזנה ידנית"))
 
-api_key = "451b85a381534122b31a96473ce02388"  # המפתח שסיפקת
+api_key = ""  # המפתח שסיפקת
 
 if mode == "שליפה אוטומטית לפי עיר":
     city = st.text_input("הכנס שם עיר:")
@@ -132,3 +132,4 @@ else:
         pred = model.predict(input_data)[0]
         outfit_en = label_encoders['outfit'].inverse_transform([pred])[0]
         st.success(f"ההמלצה שלך: {translate_outfit(outfit_en)}")
+
